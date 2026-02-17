@@ -1,0 +1,60 @@
+# Identifying Success Factors in Home Health Agencies
+
+**An analysis of CMS Home Health Quality Data**
+
+The U.S. healthcare landscape places significant emphasis on quality and outcomes — particularly in home-based care, where agencies play a key role in patient recovery and wellbeing. Using publicly available data from the Centers for Medicare & Medicaid Services (CMS), this analysis evaluates performance patterns among home health agencies to identify key success factors that differentiate high-performing providers.
+
+Specifically, this analysis investigates three questions:
+
+1. **Ownership Impact:** Are non-profit agencies associated with higher star ratings compared to for-profit providers?  
+2. **Geographic Performance:** Which states lead the nation in improving patient mobility outcomes?  
+3. **Predictive Modeling:** Which clinical metrics best predict whether an agency earns a “High” (4–5 star) rating?
+
+## Data and Methodology
+
+The CMS Home Health Care Agencies dataset includes provider characteristics, quality measures, and performance indicators collected from certified Medicare‐participating agencies. Key quality metrics examined include patient mobility improvement and timeliness of care — measures closely tied to clinical performance and patient outcomes.
+
+The analysis follows a CRISP‐DM framework, beginning with business understanding and progressing through data preparation and model evaluation.
+
+## 1. Ownership Impact on Quality Ratings
+
+| Ownership Type | Average Star Rating |
+|----------------|---------------------|
+| Non-Profit     | 3.37                |
+| Proprietary    | 3.26                |
+| Government     | 2.83                |
+
+Non-profit agencies show the highest average star rating, suggesting a modest correlation between ownership type and quality performance.
+
+## 2. Geographic Performance: Mobility Improvement
+
+Top 5 states by average patient mobility improvement:
+
+1. **Rhode Island**  
+2. **Kentucky**  
+3. **Maine**  
+4. **North Carolina**  
+5. **Puerto Rico**
+
+Regional differences may point to broader systemic or policy factors that influence patient outcomes.
+
+## 3. Predictive Modeling: Can Clinical Metrics Predict High Ratings?
+
+The classification model tested two features for predicting whether an agency receives a high star rating.
+
+| Metric              | Importance |
+|---------------------|------------|
+| Mobility Improvement | 0.53       |
+| Timely Care         | 0.47       |
+
+The model showed moderate performance (accuracy ≈ 0.65), with **mobility improvement** emerging as the stronger predictive feature.
+
+## Conclusions
+
+- Non-profit agencies have slightly higher average star ratings.
+- Certain states demonstrate stronger mobility improvements.
+- Clinical outcome metrics may be more predictive of high agencies ratings than process measures.
+
+---
+
+*End of analysis — code and visuals included in this repository.*
