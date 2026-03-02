@@ -1,60 +1,30 @@
-# Identifying Success Factors in Home Health Agencies
-
-**An analysis of CMS Home Health Quality Data**
-
-The U.S. healthcare landscape places significant emphasis on quality and outcomes — particularly in home-based care, where agencies play a key role in patient recovery and wellbeing. Using publicly available data from the Centers for Medicare & Medicaid Services (CMS), this analysis evaluates performance patterns among home health agencies to identify key success factors that differentiate high-performing providers.
-
-Specifically, this analysis investigates three questions:
-
-1. **Ownership Impact:** Are non-profit agencies associated with higher star ratings compared to for-profit providers?  
-2. **Geographic Performance:** Which states lead the nation in improving patient mobility outcomes?  
-3. **Predictive Modeling:** Which clinical metrics best predict whether an agency earns a “High” (4–5 star) rating?
-
-## Data and Methodology
-
-The CMS Home Health Care Agencies dataset includes provider characteristics, quality measures, and performance indicators collected from certified Medicare‐participating agencies. Key quality metrics examined include patient mobility improvement and timeliness of care — measures closely tied to clinical performance and patient outcomes.
-
-The analysis follows a CRISP‐DM framework, beginning with business understanding and progressing through data preparation and model evaluation.
-
-## 1. Ownership Impact on Quality Ratings
-
-| Ownership Type | Average Star Rating |
-|----------------|---------------------|
-| Non-Profit     | 3.37                |
-| Proprietary    | 3.26                |
-| Government     | 2.83                |
-
-Non-profit agencies show the highest average star rating, suggesting a modest correlation between ownership type and quality performance.
-
-## 2. Geographic Performance: Mobility Improvement
-
-Top 5 states by average patient mobility improvement:
-
-1. **Rhode Island**  
-2. **Kentucky**  
-3. **Maine**  
-4. **North Carolina**  
-5. **Puerto Rico**
-
-Regional differences may point to broader systemic or policy factors that influence patient outcomes.
-
-## 3. Predictive Modeling: Can Clinical Metrics Predict High Ratings?
-
-The classification model tested two features for predicting whether an agency receives a high star rating.
-
-| Metric              | Importance |
-|---------------------|------------|
-| Mobility Improvement | 0.53       |
-| Timely Care         | 0.47       |
-
-The model showed moderate performance (accuracy ≈ 0.65), with **mobility improvement** emerging as the stronger predictive feature.
-
-## Conclusions
-
-- Non-profit agencies have slightly higher average star ratings.
-- Certain states demonstrate stronger mobility improvements.
-- Clinical outcome metrics may be more predictive of high agencies ratings than process measures.
+Profit vs. Patients: What Really Drives a 5-Star Home Healthcare Rating?
+An analysis of CMS Home Health Quality Data
+Data obtained from data.cms.gov.
+When we choose home healthcare for our loved ones, we look at Star Ratings as a shorthand for trust. But what do those stars mean? Are non-profit agencies better than corporations? Does spending more money result in better care? I analyzed data from over 7,000 Medicare-certified agencies to separate the "vibes" from clinical reality.
+Does an agency's ownership type (Non-Profit vs. For-Profit) affect its Star Rating?
+Are Non-Profits actually achieving better clinical results (Patient Mobility), or is it just a perception?
+Does higher quality care always cost more for Medicare?
+Which specific factors are the strongest predictors of a high rating?
 
 ---
 
-*End of analysis — code and visuals included in this repository.*
+Does Ownership Matter?
+The first question is whether an agency's business model dictates quality. On the surface, the answer is yes. Generally, speaking most individuals are implicitly trained to look at a "Star Rating" to get a feel or vibe for getting an understanding of how good a product is or service will be.
+When we look at average Star Ratings across the industry, Non-Profit agencies lead the pack, earning an average rating of 3.36. In contrast, for-profit "Proprietary" agencies earn 3.26, while Government-operated facilities lag behind. The narrow error bars indicate a high degree of precision, suggesting that these differences in star ratings are statistically significant across the vast sample of providers.
+Is it 'Vibes' or Real Clinical Results?
+Stars are a starting point, but are patients getting better? I looked at Mobility Improvement - a metric that tracks a patient's ability to walk and move after receiving care.
+While non-profits hold the lead here, the gap is small: 85.7% for non-profits versus 83.3% for proprietary agencies. This suggests that for-profit agencies are effective at delivering clinical outcomes, even if their overall Star Ratings lag behind. Regardless of who signs the paycheck, frontline clinicians perform at a similar level.
+
+---
+
+The Efficiency Mystery: Higher Quality for Less?
+In most industries, we assume that higher quality comes with a higher price tag. However, the data reveals a surprise: Non-profits are the most cost-efficient providers.
+On average, non-profits spend about 3% less than the national average per patient, despite having the highest star ratings. Conversely, Government-operated facilities were the most expensive, often exceeding national averages. This debunked the myth that you have to "spend big" to get 5-star care. Efficiency and excellence can - and do - go hand-in-hand.
+The "Secret Sauce": What Drives the Rating?
+To find out what moves the needle, I trained a machine learning model to predict Star Ratings. The model achieved 80% accuracy, and the results were clear.
+The "Secret Sauce" is not ownership type or cost - it is Mobility Improvement. As shown in the chart above, this clinical outcome is the dominant driver of a rating, outweighing timely starts or financial efficiency. If an agency wants a higher rating, the data suggests they should focus on getting their patients moving.
+The "What If" Scenario
+To put this into perspective, I ran a simulation using the predictive model. If an average agency - sitting at a 2.95-star rating - managed to improve its patient mobility scores by 10 percentage points, the model predicts their rating would jump by 0.92 stars. This star increase provides a clear ROI for clinical investment. It shows that focused improvements in physical therapy and movement can transform an agency's public standing.
+Conclusion
+Quality care in the home does not require a specific tax status or a massive budget. It requires a focus on patient mobility. By prioritizing movement, agencies can improve their ratings and the lives of their patients.
