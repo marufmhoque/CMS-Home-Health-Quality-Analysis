@@ -22,3 +22,5 @@ To run this project, you will need the following Python libraries installed:
 You can install these via pip:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
+
+medium article: https://medium.com/@marufisonfire/identifying-success-factors-in-home-health-agencies-1f3d233bba3d?postPublishedType=repub
